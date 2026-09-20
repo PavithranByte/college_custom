@@ -4,7 +4,14 @@ app_publisher = "pavithran"
 app_description = "Custom college management features"
 app_email = "pavithran.profession@gmail.com"
 app_license = "mit"
-
+add_to_apps_screen = [
+    {
+        "name": "college_custom",
+        "logo": "/assets/college_custom/images/college-custom-logo.svg",
+        "title": "my custom app",
+        "route": "/desk"
+    }
+]
 # Apps
 # ------------------
 
