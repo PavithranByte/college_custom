@@ -15,6 +15,9 @@ def after_migrate():
 
 
 def setup_default_gate_pass_types():
+	if not frappe.db.exists("DocType", "Gate Pass Type"):
+		return
+
 	default_types = [
 		{
 			"pass_type_name": "Student Outpass",
