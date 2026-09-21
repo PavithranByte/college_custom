@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-09-21 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_numbering",
+  "naming_series",
+  "section_approval",
+  "auto_approve_outpass",
+  "auto_expire_hours",
+  "allow_gatekeeper_overrides",
+  "section_security",
+  "enable_qr_verification",
+  "token_secret",
+  "require_id_proof_for_visitors",
+  "section_notifications",
+  "notify_approver_on_submission",
+  "notify_applicant_on_approval"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_numbering",
+   "fieldtype": "Section Break",
+   "label": "Numbering & Naming"
+  },
+  {
+   "default": "GP-.YYYY.-.#####.",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Default Naming Series",
+   "options": "GP-.YYYY.-.#####.\nGP-.#####."
+  },
+  {
+   "fieldname": "section_approval",
+   "fieldtype": "Section Break",
+   "label": "Approval Rules"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_approve_outpass",
+   "fieldtype": "Check",
+   "label": "Auto Approve Outpass for Staff/Students"
+  },
+  {
+   "default": "24",
+   "fieldname": "auto_expire_hours",
+   "fieldtype": "Int",
+   "label": "Auto Expire Unapproved Passes (Hours)"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_gatekeeper_overrides",
+   "fieldtype": "Check",
+   "label": "Allow Gatekeeper Manual Overrides"
+  },
+  {
+   "fieldname": "section_security",
+   "fieldtype": "Section Break",
+   "label": "Security & Verification"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_qr_verification",
+   "fieldtype": "Check",
+   "label": "Enable QR Code Verification"
+  },
+  {
+   "default": "GateFlowSecretToken2026",
+   "fieldname": "token_secret",
+   "fieldtype": "Data",
+   "label": "QR Token Secret"
+  },
+  {
+   "default": "1",
+   "fieldname": "require_id_proof_for_visitors",
+   "fieldtype": "Check",
+   "label": "Require ID Proof for Visitors"
+  },
+  {
+   "fieldname": "section_notifications",
+   "fieldtype": "Section Break",
+   "label": "Notifications"
+  },
+  {
+   "default": "1",
+   "fieldname": "notify_approver_on_submission",
+   "fieldtype": "Check",
+   "label": "Notify Approver on Submission"
+  },
+  {
+   "default": "1",
+   "fieldname": "notify_applicant_on_approval",
+   "fieldtype": "Check",
+   "label": "Notify Applicant on Approval"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-09-21 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GateFlow",
+ "name": "Gate Pass Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

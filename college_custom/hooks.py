@@ -51,134 +51,26 @@ add_to_apps_screen = [
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
-# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
-# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
-
-# Svg Icons
-# ------------------
-# include app icons in desk
-# app_include_icons = "college_custom/public/icons.svg"
-
-# Home Pages
-# ----------
-
-# application home page (will override Website Settings)
-# home_page = "login"
-
-# website user home page (by Role)
-# role_home_page = {
-# 	"Role": "home_page"
-# }
-
-# Generators
-# ----------
-
-# automatically create page for each record of this doctype
-# website_generators = ["Web Page"]
-
-# automatically load and sync documents of this doctype from downstream apps
-# importable_doctypes = [doctype_1]
-
-# Jinja
-# ----------
-
-# add methods and filters to jinja environment
-# jinja = {
-# 	"methods": "college_custom.utils.jinja_methods",
-# 	"filters": "college_custom.utils.jinja_filters"
-# }
+doctype_js = {
+	"Gate Pass": "gateflow/doctype/gate_pass/gate_pass.js"
+}
 
 # Installation
 # ------------
 
 # before_install = "college_custom.install.before_install"
-# after_install = "college_custom.install.after_install"
-
-# Uninstallation
-# ------------
-
-# before_uninstall = "college_custom.uninstall.before_uninstall"
-# after_uninstall = "college_custom.uninstall.after_uninstall"
-
-# Integration Setup
-# ------------------
-# To set up dependencies/integrations with other apps
-# Name of the app being installed is passed as an argument
-
-# before_app_install = "college_custom.utils.before_app_install"
-# after_app_install = "college_custom.utils.after_app_install"
-
-# Integration Cleanup
-# -------------------
-# To clean up dependencies/integrations with other apps
-# Name of the app being uninstalled is passed as an argument
-
-# before_app_uninstall = "college_custom.utils.before_app_uninstall"
-# after_app_uninstall = "college_custom.utils.after_app_uninstall"
-
-# Build
-# ------------------
-# To hook into the build process
-
-# after_build = "college_custom.build.after_build"
-
-# Desk Notifications
-# ------------------
-# See frappe.core.notifications.get_notification_config
-
-# notification_config = "college_custom.notifications.get_notification_config"
-
-# Awesome Bar
-# -----------
-# Extra search results: list of dicts with label, description, route, index.
-# route: ["List", "ToDo"], "/desk/docs/some/page", or "https://example.com"
-# awesomebar_search = ["college_custom.search.awesomebar_results"]
-
-# Permissions
-# -----------
-# Permissions evaluated in scripted ways
-
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
-#
-# has_permission = {
-# 	"Event": "frappe.desk.doctype.event.event.has_permission",
-# }
-
-# Document Events
-# ---------------
-# Hook on document methods and events
-
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+after_install = "college_custom.setup.after_install"
+after_migrate = "college_custom.setup.after_migrate"
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"college_custom.tasks.all"
-# 	],
-# 	"daily": [
-# 		"college_custom.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"college_custom.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"college_custom.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"college_custom.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"hourly": [
+		"college_custom.gateflow.tasks.check_expired_passes"
+	],
+}
+
 
 # Testing
 # -------

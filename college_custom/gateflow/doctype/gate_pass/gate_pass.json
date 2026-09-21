@@ -1,0 +1,340 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "naming_series:",
+ "creation": "2026-09-21 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "title",
+  "pass_type",
+  "pass_category",
+  "movement_type",
+  "status",
+  "sb_applicant",
+  "person",
+  "applicant_user",
+  "applicant_name",
+  "phone",
+  "email",
+  "cb_applicant",
+  "visitor_company",
+  "id_proof_type",
+  "id_proof_number",
+  "visitor_photo",
+  "sb_movement",
+  "valid_from",
+  "valid_upto",
+  "purpose",
+  "cb_movement",
+  "actual_exit_datetime",
+  "actual_entry_datetime",
+  "exit_gatekeeper",
+  "entry_gatekeeper",
+  "sb_vehicle",
+  "vehicle_number",
+  "vehicle_type",
+  "driver_name",
+  "sb_items",
+  "items",
+  "sb_approval",
+  "approver",
+  "approval_datetime",
+  "rejection_reason",
+  "cb_approval",
+  "verification_token",
+  "qr_code_svg",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "GP-.YYYY.-.#####.",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "GP-.YYYY.-.#####.\nGP-.#####.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pass_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Pass Type",
+   "options": "Gate Pass Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pass_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Pass Category",
+   "options": "Student\nEmployee\nVisitor\nMaterial/Vendor",
+   "reqd": 1
+  },
+  {
+   "default": "Two-Way",
+   "fieldname": "movement_type",
+   "fieldtype": "Select",
+   "label": "Movement Type",
+   "options": "Two-Way\nOutward Only\nInward Only",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nPending Approval\nApproved\nOut/Active\nReturned\nCompleted\nExpired\nRejected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_applicant",
+   "fieldtype": "Section Break",
+   "label": "Applicant / Holder Details"
+  },
+  {
+   "fieldname": "person",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Person Link",
+   "options": "Person"
+  },
+  {
+   "fieldname": "applicant_user",
+   "fieldtype": "Link",
+   "label": "Applicant User Link",
+   "options": "User"
+  },
+  {
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Applicant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "cb_applicant",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visitor_company",
+   "fieldtype": "Data",
+   "label": "Company / Institution"
+  },
+  {
+   "fieldname": "id_proof_type",
+   "fieldtype": "Select",
+   "label": "ID Proof Type",
+   "options": "\nAadhaar\nPAN Card\nDriving License\nPassport\nStudent ID\nEmployee ID\nOther"
+  },
+  {
+   "fieldname": "id_proof_number",
+   "fieldtype": "Data",
+   "label": "ID Proof Number"
+  },
+  {
+   "fieldname": "visitor_photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo Attachment"
+  },
+  {
+   "fieldname": "sb_movement",
+   "fieldtype": "Section Break",
+   "label": "Movement Schedule & Timings"
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Valid From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_upto",
+   "fieldtype": "Datetime",
+   "label": "Valid Upto",
+   "reqd": 1
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Small Text",
+   "label": "Purpose / Reason for Pass",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_movement",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_exit_datetime",
+   "fieldtype": "Datetime",
+   "label": "Actual Exit Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_entry_datetime",
+   "fieldtype": "Datetime",
+   "label": "Actual Entry Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "exit_gatekeeper",
+   "fieldtype": "Link",
+   "label": "Exit Gatekeeper",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "entry_gatekeeper",
+   "fieldtype": "Link",
+   "label": "Entry Gatekeeper",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb_vehicle",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Information"
+  },
+  {
+   "fieldname": "vehicle_number",
+   "fieldtype": "Data",
+   "label": "Vehicle Number"
+  },
+  {
+   "default": "None",
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "label": "Vehicle Type",
+   "options": "None\nTwo Wheeler\nFour Wheeler\nTruck / Heavy Vehicle\nOther"
+  },
+  {
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name"
+  },
+  {
+   "fieldname": "sb_items",
+   "fieldtype": "Section Break",
+   "label": "Items / Particulars Table"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Gate Pass Item"
+  },
+  {
+   "fieldname": "sb_approval",
+   "fieldtype": "Section Break",
+   "label": "Approval & Verification Token"
+  },
+  {
+   "fieldname": "approver",
+   "fieldtype": "Link",
+   "label": "Assigned Approver",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_datetime",
+   "fieldtype": "Datetime",
+   "label": "Approval Timestamp",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_approval",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "verification_token",
+   "fieldtype": "Data",
+   "label": "Verification Token",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qr_code_svg",
+   "fieldtype": "Code",
+   "label": "QR Code String / Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Gate Pass",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Gate Pass Log",
+   "link_fieldname": "gate_pass"
+  }
+ ],
+ "modified": "2026-09-21 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GateFlow",
+ "name": "Gate Pass",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "All",
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "title,applicant_name,phone,status,pass_type",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title",
+ "track_changes": 1
+}

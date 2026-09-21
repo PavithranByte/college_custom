@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:pass_type_name",
+ "creation": "2026-09-21 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pass_type_name",
+  "pass_category",
+  "is_active",
+  "cb_1",
+  "requires_approval",
+  "allowed_movement_type",
+  "max_duration_hours",
+  "cb_2",
+  "require_vehicle_info",
+  "require_items_table",
+  "sb_description",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "pass_type_name",
+   "fieldtype": "Data",
+   "label": "Pass Type Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "pass_category",
+   "fieldtype": "Select",
+   "label": "Pass Category",
+   "options": "Student\nEmployee\nVisitor\nMaterial/Vendor",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "requires_approval",
+   "fieldtype": "Check",
+   "label": "Requires Approval"
+  },
+  {
+   "default": "Both",
+   "fieldname": "allowed_movement_type",
+   "fieldtype": "Select",
+   "label": "Allowed Movement Type",
+   "options": "Both\nOutward Only\nInward Only"
+  },
+  {
+   "default": "8",
+   "fieldname": "max_duration_hours",
+   "fieldtype": "Int",
+   "label": "Max Duration (Hours)"
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_vehicle_info",
+   "fieldtype": "Check",
+   "label": "Require Vehicle Info"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_items_table",
+   "fieldtype": "Check",
+   "label": "Require Items Table"
+  },
+  {
+   "fieldname": "sb_description",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-21 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GateFlow",
+ "name": "Gate Pass Type",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "pass_type_name,pass_category",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "pass_type_name"
+}
