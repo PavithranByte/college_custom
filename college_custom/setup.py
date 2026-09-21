@@ -23,7 +23,7 @@ def setup_default_gate_pass_types():
 			"pass_type_name": "Student Outpass",
 			"pass_category": "Student",
 			"requires_approval": 1,
-			"allowed_movement_type": "Two-Way",
+			"allowed_movement_type": "Both",
 			"max_duration_hours": 12,
 			"description": "Standard movement outpass for campus students."
 		},
@@ -31,7 +31,7 @@ def setup_default_gate_pass_types():
 			"pass_type_name": "Employee Duty Pass",
 			"pass_category": "Employee",
 			"requires_approval": 1,
-			"allowed_movement_type": "Two-Way",
+			"allowed_movement_type": "Both",
 			"max_duration_hours": 8,
 			"description": "Official duty pass for staff & faculty members."
 		},
@@ -39,7 +39,7 @@ def setup_default_gate_pass_types():
 			"pass_type_name": "Visitor Entry Pass",
 			"pass_category": "Visitor",
 			"requires_approval": 0,
-			"allowed_movement_type": "Two-Way",
+			"allowed_movement_type": "Both",
 			"max_duration_hours": 4,
 			"description": "Visitor & parent entry pass."
 		},
@@ -47,7 +47,7 @@ def setup_default_gate_pass_types():
 			"pass_type_name": "Material Outward (Returnable)",
 			"pass_category": "Material/Vendor",
 			"requires_approval": 1,
-			"allowed_movement_type": "Two-Way",
+			"allowed_movement_type": "Both",
 			"require_items_table": 1,
 			"description": "Returnable equipment / material movement pass."
 		},
