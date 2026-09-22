@@ -1,0 +1,100 @@
+{
+ "app": "college_custom",
+ "creation": "2026-09-20 11:43:18.741710",
+ "docstatus": 0,
+ "doctype": "Workspace Sidebar",
+ "idx": 0,
+ "items": [
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "wallpaper",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "my custom app",
+   "link_to": "my custom app",
+   "link_type": "Workspace",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "pass",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "GateFlow",
+   "link_to": "GateFlow",
+   "link_type": "Workspace",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "ticket",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Gate Pass",
+   "link_to": "Gate Pass",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "user",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Person",
+   "link_to": "Person",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "history",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Gate Pass Log",
+   "link_to": "Gate Pass Log",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "tag",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Gate Pass Type",
+   "link_to": "Gate Pass Type",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "settings",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Gate Pass Settings",
+   "link_to": "Gate Pass Settings",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-09-22 07:52:51.773795",
+ "modified_by": "Administrator",
+ "module": "my custom app",
+ "name": "my custom app",
+ "owner": "pavithran.profession@gmail.com",
+ "standard": 1,
+ "title": "my custom app"
+}
